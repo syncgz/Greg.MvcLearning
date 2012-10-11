@@ -16,9 +16,6 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
             return View();
         }
 
-        //
-        // GET: /Auction/Details/5
-
         public ActionResult Details(int id = 0)
         {
             var auction = new Auction
@@ -35,24 +32,17 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
             return View(auction);
         }
 
-        //
-        // GET: /Auction/Create
-
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-        //
-        // POST: /Auction/Create
-
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Auction auction)
         {
             try
             {
-                // TODO: Add insert logic here
-
                 return RedirectToAction("Index");
             }
             catch
