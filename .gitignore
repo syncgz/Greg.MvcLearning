@@ -5,3 +5,4 @@ _ReSharper.Greg.MvcLearning.MvcTestApplication
 
 # mstest test results
 TestResults
+*.suo
