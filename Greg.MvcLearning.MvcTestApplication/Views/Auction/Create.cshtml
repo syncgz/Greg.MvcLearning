@@ -2,28 +2,73 @@
 @{
     ViewBag.Title = "Create";
     Model.Title = "Default value";
+    Model.StartTime = DateTime.Now;
+    Model.EndTime = DateTime.Now;
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('button#abc').click(function () {
+            alert('Button was clicked!');
+        });
+    });
+</script>
 <h2>
     Create Auction</h2>
 @using (Html.BeginForm())
 {
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Title)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title, "*")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Description)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description, "*")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.StartPrice)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.StartPrice)
+                @Html.ValidationMessageFor(model => model.StartPrice, "*")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.EndTime)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.EndTime)
+                @Html.ValidationMessageFor(model => model.EndTime, "*")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.AuctionType)
+            </td>
+            <td>
+                @Html.DropDownList("AuctionType", new List<SelectListItem>() { new SelectListItem() { Text = "Type1", Value = "1" }, new SelectListItem() { Text = "Type2", Value = "2" } })
+                @Html.ValidationMessageFor(model => model.AuctionType, "*")
+            </td>
+        </tr>
+    </table>
     <p>
-        @Html.LabelFor(model => model.Title)
-        @Html.EditorFor(model => model.Title)
+        <input type="submit" value="Create!!" />
+        <button id="abc">What the fuck is this!!</button>
     </p>
-    <p>
-        @Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description)
-    </p>
-    <p>
-        @Html.LabelFor(model => model.StartPrice)
-        @Html.EditorFor(model => model.StartPrice)
-    </p>
-    <p>
-        @Html.LabelFor(model => model.EndTime)
-        @Html.EditorFor(model => model.EndTime)
-    </p>
-    <p>
-        <input type="submit" value="Create" />
-    </p>
+    
+    @Html.TextArea("CustomTextArea")
+    
+    @Html.ValidationSummary();
 }

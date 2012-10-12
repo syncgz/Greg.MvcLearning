@@ -8,8 +8,7 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
 {
     public class AuctionController : Controller
     {
-        //
-        // GET: /Auction/
+        private List<Auction> _list = new List<Auction>(); 
 
         public ActionResult Index()
         {
@@ -35,7 +34,9 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            Auction auction = new Auction();
+            
+            return View(auction);
         }
 
         [HttpPost]
@@ -43,12 +44,25 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
         {
             try
             {
-                return RedirectToAction("Index");
+                if(String.IsNullOrEmpty(auction.Title))
+                {
+                    ModelState.AddModelError("Title","Title cannot be null.");
+                }
+
+                if(ModelState.IsValid)
+                {
+                    _list.Add(auction);
+
+                    return RedirectToAction("Index");
+                }
             }
             catch
             {
-                return View();
+                return View(auction);
             }
+            
+            return View(auction);
+          
         }
 
         //
@@ -101,6 +115,40 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Auction(int id = 0)
+        {
+            var item = new Auction()
+                {
+                    AuctionType = AuctionType.Type1,
+                    CurrentPrice = 100,
+                    Description = "Description",
+                    EndTime = DateTime.Now,
+                    Id = 1,
+                    StartPrice = 10,
+                    StartTime = DateTime.Now,
+                    Title = "Title"
+                };
+
+            return View("Auction", item);
+        }
+
+        public ActionResult PartialAuction(int id = 0)
+        {
+            var item = new Auction()
+            {
+                AuctionType = AuctionType.Type1,
+                CurrentPrice = 100,
+                Description = "Description",
+                EndTime = DateTime.Now,
+                Id = 1,
+                StartPrice = 10,
+                StartTime = DateTime.Now,
+                Title = "Title"
+            };
+
+            return PartialView("Auction",item);
         }
     }
 }
