@@ -4,16 +4,12 @@
     Model.Title = "Default value";
     Model.StartTime = DateTime.Now;
     Model.EndTime = DateTime.Now;
+    
+    IDictionary<string,object> dict = new Dictionary<string, object>();
+    
+    dict.Add("width","1000");
 }
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('button#abc').click(function () {
-            alert('Button was clicked!');
-        });
-    });
-</script>
-<h2>
-    Create Auction</h2>
+<h2>Create Auction</h2>
 @using (Html.BeginForm())
 {
     <table>
@@ -69,6 +65,8 @@
     </p>
     
     @Html.TextArea("CustomTextArea")
+    
+    @Html.TextBox("a","", dict);
     
     @Html.ValidationSummary();
 }

@@ -65,16 +65,10 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
           
         }
 
-        //
-        // GET: /Auction/Edit/5
-
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        //
-        // POST: /Auction/Edit/5
 
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
@@ -91,16 +85,10 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
             }
         }
 
-        //
-        // GET: /Auction/Delete/5
-
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        //
-        // POST: /Auction/Delete/5
 
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
@@ -149,6 +137,17 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
             };
 
             return PartialView("Auction",item);
+        }
+
+        public ActionResult NotFound()
+        {
+            return this.HttpNotFound();
+        }
+
+        public ActionResult Redirect()
+        {
+            
+            return this.Redirect("http://www.wp.pl");
         }
     }
 }
