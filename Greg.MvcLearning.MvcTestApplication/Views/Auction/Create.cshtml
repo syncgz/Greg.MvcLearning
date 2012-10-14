@@ -9,6 +9,22 @@
     
     dict.Add("width","1000");
 }
+
+<script type="text/javascript">
+
+    function ClickMethod() 
+    {
+        alert("Message");
+    }
+
+    $(function () 
+    {
+        $("#abc").click(ClickMethod);
+    });
+
+    
+</script>
+
 <h2>Create Auction</h2>
 @using (Html.BeginForm())
 {
