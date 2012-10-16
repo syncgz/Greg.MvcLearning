@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Greg.MvcLearning.MvcTestApplication.Models;
 
 namespace Greg.MvcLearning.MvcTestApplication.Controllers
 {
@@ -23,6 +24,12 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
 
         [HttpGet]
         public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Person person)
         {
             return View();
         }
