@@ -1,8 +1,9 @@
-﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+﻿body
+{
+	font-size: .85em;
+	font-family: "Segoe UI" , Verdana, Helvetica, Sans-Serif;
+	color: #232323;
+	background-color: #00FFFF;
 }
 
 header, footer, nav, section {
