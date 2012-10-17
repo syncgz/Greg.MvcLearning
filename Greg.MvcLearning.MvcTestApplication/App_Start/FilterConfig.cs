@@ -7,6 +7,12 @@ namespace Greg.MvcLearning.MvcTestApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new HandleErrorAttribute()
+            {
+                ExceptionType = typeof(System.Data.DataException),
+                View = "DatabaseError"
+            });
+
             filters.Add(new HandleErrorAttribute());
         }
     }

@@ -24,4 +24,5 @@ namespace Greg.MvcLearning.MvcTestApplication
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
+
 }

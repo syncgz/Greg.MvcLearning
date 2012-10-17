@@ -126,6 +126,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\AuctionController.cs" />
+    <Compile Include="Extensions\CustomHandleErrorAttribute.cs" />
     <Compile Include="Extensions\ImageHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
