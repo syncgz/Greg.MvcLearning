@@ -8,6 +8,11 @@ namespace Greg.MvcLearning.MvcTestApplication.Controllers
 {
     public class ErrorController : Controller
     {
+        public string Create()
+        {
+            return "abc";
+        }
+
         public ActionResult Index()
         {
             throw new Exception("Exception information!!!");

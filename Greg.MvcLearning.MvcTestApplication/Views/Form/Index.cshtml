@@ -1,0 +1,15 @@
+﻿@using Greg.MvcLearning.MvcTestApplication.Models
+@model Greg.MvcLearning.MvcTestApplication.Models.FormContainer
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.EditorForModel();
+    <br/>                
+    <button id="abc">What the fuck is this!!</button>
+}
