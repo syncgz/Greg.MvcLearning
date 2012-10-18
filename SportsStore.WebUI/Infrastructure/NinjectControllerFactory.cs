@@ -27,8 +27,9 @@ namespace SportsStore.WebUI.Infrastructure
         }
         private void AddBindings()
         {
-            // Mock implementation of the IProductRepository Interface 
+
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            
             mock.Setup(m => m.Products).Returns(new List<Product> 
             { 
                 new Product { Name = "Football", Price = 25 }, 
