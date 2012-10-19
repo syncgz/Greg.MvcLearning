@@ -32,9 +32,12 @@ namespace SportsStore.WebUI.Infrastructure
             
             mock.Setup(m => m.Products).Returns(new List<Product> 
             { 
-                new Product { Name = "Football", Price = 25 }, 
-                new Product { Name = "Surf board", Price = 179 }, 
-                new Product { Name = "Running shoes", Price = 95 } 
+                new Product { Name = "aaa", Price = 25,Category = "a", ProductID = 1}, 
+                new Product { Name = "bbb", Price = 179,Category = "a", ProductID = 2 }, 
+                new Product { Name = "ccc", Price = 95,Category = "a" , ProductID = 3}, 
+                new Product { Name = "ddd", Price = 25,Category = "b", ProductID = 4}, 
+                new Product { Name = "eee", Price = 179,Category = "b", ProductID = 5 }, 
+                new Product { Name = "fff", Price = 95,Category = "b", ProductID = 6 } 
             }.AsQueryable());
             
             ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);

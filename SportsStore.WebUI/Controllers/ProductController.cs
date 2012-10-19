@@ -19,7 +19,7 @@ namespace SportsStore.WebUI.Controllers
             this.repository = repository;
         }
 
-        public ActionResult List(int page = 1)
+        /*public ActionResult List(int page = 1)
         {
             ProductsListViewModel viewModel = new ProductsListViewModel
             {
@@ -33,6 +33,27 @@ namespace SportsStore.WebUI.Controllers
                     ItemsPerPage = PageSize,
                     TotalItems = repository.Products.Count()
                 }
+            };
+            return View(viewModel);
+        }*/
+
+        public ActionResult List(string category,int page = 1)
+        {
+            ProductsListViewModel viewModel = new ProductsListViewModel
+            {
+                Products = repository.Products
+                .Where(x=>x.Category == category || x.Category == null)
+                .OrderBy(p => p.ProductID)
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = repository.Products.Where(x => x.Category == category || x.Category == null).Count()
+                },
+                CurrentCategory = category
+                
             };
             return View(viewModel);
         }
