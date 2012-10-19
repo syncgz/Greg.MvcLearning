@@ -22,6 +22,25 @@ DIV.item INPUT
 	cursor: pointer;
 }
 
+DIV#cart
+{
+	float: right;
+	margin: .8em;
+	color: Silver;
+	background-color: #555;
+	padding: .5em .5em .5em 1em;
+}
+DIV#cart A
+{
+	text-decoration: none;
+	padding: .4em 1em .4em 1em;
+	line-height: 2.1em;
+	margin-left: .5em;
+	background-color: #333;
+	color: White;
+	border: 1px solid black;
+}
+
 H2
 {
 	margin-top: 0.3em;
@@ -827,7 +846,7 @@ DIV.pager A.selected
 {
 
 	/* header
-				    ----------------------------------------------------------*/
+					    ----------------------------------------------------------*/
 	header .float-left, header .float-right
 	{
 		float: none;
@@ -897,7 +916,7 @@ DIV.pager A.selected
 
 
 	/* main layout
-				    ----------------------------------------------------------*/
+					    ----------------------------------------------------------*/
 	.main-content, .featured + .main-content
 	{
 		background-position: 10px 0;
@@ -984,7 +1003,7 @@ DIV.pager A.selected
 
 
 	/* footer
-				    ----------------------------------------------------------*/
+					    ----------------------------------------------------------*/
 	footer .float-left, footer .float-right
 	{
 		float: none;
