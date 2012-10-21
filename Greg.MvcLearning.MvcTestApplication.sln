@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greg.MvcLearning.MvcTestApplication", "Greg.MvcLearning.MvcTestApplication\Greg.MvcLearning.MvcTestApplication.csproj", "{05CB5563-30F6-4530-9BBF-72C0124B2F00}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greg.MvcLearning.MvcTemplate", "Greg.MvcLearning.MvcTemplate\Greg.MvcLearning.MvcTemplate.csproj", "{1E786645-D790-45F6-B409-80EE5F29ADFF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{14393463-97F5-4272-9B30-6FF6AB4FA888}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SportsStore.WebUI\SportsStore.WebUI.csproj", "{6664BD38-57FC-4B42-95B4-FFBB74DF698A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.UnitTests", "SportsStore.UnitTests\SportsStore.UnitTests.csproj", "{2DA19ACA-D993-444A-9F88-065086F6575C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greg.MvcTest", "Greg.MvcTest\Greg.MvcTest.csproj", "{E52DE726-C772-4996-AD8D-AA9C4B1427F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,14 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05CB5563-30F6-4530-9BBF-72C0124B2F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05CB5563-30F6-4530-9BBF-72C0124B2F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05CB5563-30F6-4530-9BBF-72C0124B2F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05CB5563-30F6-4530-9BBF-72C0124B2F00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E786645-D790-45F6-B409-80EE5F29ADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E786645-D790-45F6-B409-80EE5F29ADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E786645-D790-45F6-B409-80EE5F29ADFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E786645-D790-45F6-B409-80EE5F29ADFF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{14393463-97F5-4272-9B30-6FF6AB4FA888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14393463-97F5-4272-9B30-6FF6AB4FA888}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14393463-97F5-4272-9B30-6FF6AB4FA888}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,6 +27,10 @@ Global
 		{2DA19ACA-D993-444A-9F88-065086F6575C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DA19ACA-D993-444A-9F88-065086F6575C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DA19ACA-D993-444A-9F88-065086F6575C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52DE726-C772-4996-AD8D-AA9C4B1427F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52DE726-C772-4996-AD8D-AA9C4B1427F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52DE726-C772-4996-AD8D-AA9C4B1427F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52DE726-C772-4996-AD8D-AA9C4B1427F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

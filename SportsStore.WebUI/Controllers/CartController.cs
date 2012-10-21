@@ -69,5 +69,10 @@ namespace SportsStore.WebUI.Controllers
             });
         }
 
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
+        } 
+
     }
 }
