@@ -1,0 +1,38 @@
+﻿
+@using MvcJQuery.Models
+
+@model IEnumerable<Summit> 
+
+@{ 
+ViewBag.Title = "List of Summits"; 
+} 
+
+<h4>Summits</h4> 
+
+<table> 
+    <thead>
+    <tr><th>Name</th><th>Height</th><th></th></tr> 
+    </thead> 
+    @foreach (Summit s in Model) 
+    { 
+        <tr> 
+        <td>@s.Name</td> 
+        <td>@s.Height</td> 
+        <td> 
+        @using (Html.BeginForm("DeleteSummit", "Summit")) 
+        { 
+            @Html.Hidden("name", @s.Name)
+         
+            <input type="submit" value="Delete" /> 
+        } 
+        </td> 
+        </tr> 
+    } 
+</table> 
+
+@Html.ActionLink("Add", "AddSummit") 
+
+@using (Html.BeginForm("ResetSummits", "Home")) 
+{ 
+    <input type="submit" value="Reset" /> 
+} 
