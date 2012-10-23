@@ -1,4 +1,10 @@
-﻿body {
+﻿.summitTable 
+{ 
+border: thin solid black; 
+margin: 5px; 
+}
+
+body {
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: #232323;
