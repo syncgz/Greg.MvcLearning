@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMvc", "AjaxMvc\AjaxMvc.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcJQuery", "MvcJQuery\MvcJQuery.csproj", "{5F688D83-0F94-48BC-9356-7D0280148803}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSecurityForms", "MvcSecurity\MvcSecurityForms.csproj", "{597A548E-4ED0-488C-819B-BF44022E03F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSecurityWindows", "MvcSecurityWindows\MvcSecurityWindows.csproj", "{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{5F688D83-0F94-48BC-9356-7D0280148803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F688D83-0F94-48BC-9356-7D0280148803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F688D83-0F94-48BC-9356-7D0280148803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{597A548E-4ED0-488C-819B-BF44022E03F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597A548E-4ED0-488C-819B-BF44022E03F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597A548E-4ED0-488C-819B-BF44022E03F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597A548E-4ED0-488C-819B-BF44022E03F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
