@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{14393463-97F5-4272-9B30-6FF6AB4FA888}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SportsStore.WebUI\SportsStore.WebUI.csproj", "{6664BD38-57FC-4B42-95B4-FFBB74DF698A}"
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSecurityForms", "MvcSecurity\MvcSecurityForms.csproj", "{597A548E-4ED0-488C-819B-BF44022E03F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSecurityWindows", "MvcSecurityWindows\MvcSecurityWindows.csproj", "{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMvc2", "AjaxMvc2\AjaxMvc2.csproj", "{0301886F-F142-4202-8543-0E0324EA1A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83383BA3-BDAC-4167-A9F7-AC3C5B00C1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0301886F-F142-4202-8543-0E0324EA1A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0301886F-F142-4202-8543-0E0324EA1A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0301886F-F142-4202-8543-0E0324EA1A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0301886F-F142-4202-8543-0E0324EA1A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

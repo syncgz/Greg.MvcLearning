@@ -1,0 +1,24 @@
+﻿@model IEnumerable<string>
+
+@section head 
+    {
+    <script type="text/javascript" src="@Url.Content("~/scripts/AjaxDemo.js")"></script>
+}
+
+<h4>Comments</h4>
+
+<ul id="comments">
+    @foreach (var comment in Model) { 
+        <li>@comment</li> 
+    }
+</ul>
+
+<form method="post" id="commentForm" action="@Url.Action("AddComment")">
+    
+    @Html.TextArea("Comment", new { rows = 5, cols = 50 })
+    
+    <br />
+    
+    <input type="submit" value="Add Comment" />
+
+</form>
