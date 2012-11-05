@@ -33,5 +33,10 @@ namespace AjaxMvc2.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult TestGet()
+        {
+            return PartialView();
+        }
+
     }
 }
