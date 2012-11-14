@@ -25,7 +25,11 @@ namespace WebAPI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            GlobalConfiguration.Configuration.Formatters.Add(new BufferedFeedFormatter());
+            GlobalConfiguration.Configuration.Formatters.Insert(0,new BufferedFeedFormatter("text/html"));
+            GlobalConfiguration.Configuration.Formatters.Insert(1, new BufferedFeedFormatter("application/xml"));
+            GlobalConfiguration.Configuration.Formatters.Insert(2, new BufferedFeedFormatter("application/xml"));
+
+      
         }
     }
 }

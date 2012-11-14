@@ -9,11 +9,18 @@ namespace WebAPI
     {
         public static void Register(HttpConfiguration config)
         {
+            
             config.Routes.MapHttpRoute(
-                name: "API Default",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+              name: "Api UriPathExtension",
+              routeTemplate: "api/{controller}.{extension}/{id}",
+              defaults: new { id = RouteParameter.Optional, extension = RouteParameter.Optional }
             );
+
+            //config.Routes.MapHttpRoute(
+            //    name: "API Default",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
         }
     }
 }

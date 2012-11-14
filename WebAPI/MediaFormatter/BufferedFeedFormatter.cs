@@ -11,16 +11,16 @@ using WebAPI.Models;
 
 namespace WebAPI.MediaFormatter
 {
-    public class BufferedFeedFormatter: BufferedMediaTypeFormatter
+    public class BufferedFeedFormatter : BufferedMediaTypeFormatter
     {
         #region Const
 
         //Zadeklarowane MIME types.
 
         private readonly string atom = "application/atom+xml";
-        
+
         private readonly string rss = "application/rss+xml";
-        
+
         #endregion
 
         #region Constructor
@@ -28,10 +28,20 @@ namespace WebAPI.MediaFormatter
         public BufferedFeedFormatter()
         {
             //Mime types obslugiwane przez formattera
-            
+
             SupportedMediaTypes.Add(new MediaTypeHeaderValue(atom));
 
             SupportedMediaTypes.Add(new MediaTypeHeaderValue(rss));
+        }
+        /// <summary>
+        ///  Przeladowany konstruktor ktory pozwala polaczyc dowolny mediatype z uri rozszerzeniem
+        /// </summary>
+        /// <param name="format"></param>
+        public BufferedFeedFormatter(string format)
+        {
+            this.AddUriPathExtensionMapping("rss", new MediaTypeHeaderValue(format));
+            
+            this.AddQueryStringMapping("formatter", "rss", new MediaTypeHeaderValue(format));
         }
 
         #endregion
@@ -67,7 +77,7 @@ namespace WebAPI.MediaFormatter
         {
             if (type == typeof(Feed) || type == typeof(IEnumerable<Feed>))
                 return true;
-           
+
             return false;
         }
 
@@ -75,7 +85,7 @@ namespace WebAPI.MediaFormatter
         private void BuildSyndicationFeed(object models, Stream stream, string contenttype)
         {
             List<SyndicationItem> items = new List<SyndicationItem>();
-            
+
             var feed = new SyndicationFeed()
             {
                 Title = new TextSyndicationContent("My Feed")
@@ -116,16 +126,16 @@ namespace WebAPI.MediaFormatter
             var item = new SyndicationItem()
             {
                 Title = new TextSyndicationContent(u.Title),
-                
+
                 BaseUri = new Uri(u.Address),
-                
+
                 LastUpdatedTime = u.CreatedAt,
-                
+
                 Content = new TextSyndicationContent(u.Description)
             };
 
             item.Authors.Add(new SyndicationPerson() { Name = u.CreatedBy });
-            
+
             return item;
         }
 
