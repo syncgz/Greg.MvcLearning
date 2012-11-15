@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebAPI.MediaFormatter;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
@@ -11,11 +12,11 @@ namespace WebAPI.Controllers
     public class FeedController : ApiController
     {
         // GET api/feed/5
-        public Feed Get()
+        public HttpResponseMessage Get()
         {
             int a = 100;
 
-            return new Feed()
+            var resultObj = new Feed()
                 {
                     Address = "http://www.wp.pl",
                     CreatedAt = DateTime.Now,
@@ -24,6 +25,11 @@ namespace WebAPI.Controllers
                     Title = "Title",
                     UrlId = 1
                 };
+
+
+            return new HttpResponseMessage(){Content = new ObjectContent<Feed>(resultObj,new BufferedFeedFormatter("application/xml"),"application/xml")};
         }
+
+
     }
 }
