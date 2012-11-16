@@ -12,6 +12,7 @@ namespace SportsStore.WebUI.Controllers
     {
         private IProductRepository _repository;
 
+
         public CartController(IProductRepository repository)
         {
             _repository = repository;
@@ -27,7 +28,7 @@ namespace SportsStore.WebUI.Controllers
             }
             
             return RedirectToAction("Index", new { returnUrl });
-        }
+        } 
 
         public RedirectToRouteResult RemoveFromCart(Cart cart, int productId, string returnUrl)
         {
